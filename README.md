@@ -111,7 +111,7 @@ pm2 logs -f ajusteRelatorioSnep
 
 **O primeiro passo** é criar uma regra para a entrada da ligação no Snep, essa regra vai funcionar somente quando a ligação será enviada para a fila de atendimento:
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/594383b1-157e-4f0f-a2cc-4d461869abfc/Captura_de_Tela_2021-02-21_as_15.25.56.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/594383b1-157e-4f0f-a2cc-4d461869abfc/Captura_de_Tela_2021-02-21_as_15.25.56.png)
+![image1](https://github.com/fabiotheo/apprelatorio/blob/main/images/image1.png)
 
 *Atente-se para a correta criação dos centros de custo, cada fila deve ter um centro de custo separado.* 
 
@@ -138,7 +138,7 @@ exten => _.,n,Hangup()
 
 **Exemplo de como fica o relatório:**
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d7e4cea1-2249-40a6-ac42-c32c4a414754/Captura_de_Tela_2021-02-21_as_15.24.56.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d7e4cea1-2249-40a6-ac42-c32c4a414754/Captura_de_Tela_2021-02-21_as_15.24.56.png)
+![image2](https://github.com/fabiotheo/apprelatorio/blob/main/images/image2.png)
 
 Se a ligação não é atendida, o destino fica original. Se a ligação é atendida, o destino é o ramal que atendeu. 
 
@@ -216,10 +216,10 @@ Nesse caso, caso a ligação seja marcada como não atendida caso ela não seja 
 
 No snep iremos criar a seguinte regra:
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e9d7eb61-8e87-4eec-ac93-3d6ad478a70b/Captura_de_Tela_2021-02-21_as_15.44.42.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e9d7eb61-8e87-4eec-ac93-3d6ad478a70b/Captura_de_Tela_2021-02-21_as_15.44.42.png)
+![image3](https://github.com/fabiotheo/apprelatorio/blob/main/images/image3.png)
 
 Problemas dessa configuração, no relatório não irá aparecer as ligações enviada para a fila, somente para para o contexto não atendido. Exemplo:
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a816dea-3542-4ece-b772-74e64d7097c9/Captura_de_Tela_2021-02-21_as_15.46.08.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1a816dea-3542-4ece-b772-74e64d7097c9/Captura_de_Tela_2021-02-21_as_15.46.08.png)
+![image4](https://github.com/fabiotheo/apprelatorio/blob/main/images/image4.png)
 
 Nesse caso, criamos um centro de custo ***Não Atendidas Fila 1*** para sinalizar que essas ligações vieram da fila 1.
